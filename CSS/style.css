@@ -2,19 +2,25 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: "Roboto", sans-serif;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
   display: flex;
   width: 100%;
+}
+h1 {
+  font-family: "Roboto", sans-serif;
+  margin: 20px 0;
 }
 
 h2 {
   font-size: 2rem;
   text-transform: uppercase;
   text-align: center;
+  margin-bottom: 20px;
 }
 
 h4 {
@@ -27,12 +33,19 @@ ul {
 
 a {
   text-decoration: none;
+  font-family: "Roboto", sans-serif;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
 }
 
 /* ! HEADER START */
 
 header {
   background-color: #31cbc3;
+  position: fixed;
+  width: 100%;
 }
 
 body {
@@ -123,47 +136,11 @@ body {
   color: #fff;
   font-size: 1.2rem;
   text-transform: uppercase;
+  transition-duration: 0.5s;
 }
 
-@media (max-width: 780px) {
-  .menu-button-container {
-    display: flex;
-  }
-  .menu {
-    position: absolute;
-    top: 0;
-    margin-top: 50px;
-    left: 0;
-    flex-direction: column;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-  }
-  #menu-toggle ~ .menu li {
-    height: 0;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
-  }
-  #menu-toggle:checked ~ .menu li {
-    border: 1px solid #333;
-    height: 2.5em;
-    padding: 0.5em;
-    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
-  }
-  .menu > li {
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0.5em 0;
-    width: 100%;
-    color: white;
-    background-color: #222;
-  }
-  .menu > li:not(:last-child) {
-    border-bottom: 1px solid #444;
-  }
+.header__link:hover {
+  border-bottom: 3px solid #fff;
 }
 
 /* ? HEADER FINISH */
@@ -197,12 +174,14 @@ body {
   background: url(../assets/images/content/content__bg.jpg) no-repeat center
     center fixed;
   color: #fff;
+  font-family: "Roboto", sans-serif;
 }
 
 .content__bg {
   background-color: rgba(0, 0, 0, 0.7);
   padding: 50px 0;
   text-align: center;
+  padding-top: 90px;
 }
 
 .content__wrap {
@@ -248,6 +227,7 @@ body {
 
 .about__me h2 {
   text-align: left;
+  font-family: "Roboto", sans-serif;
 }
 
 .about {
@@ -360,9 +340,60 @@ footer {
 
 .footer__container a {
   font-size: 1.2rem;
-  color: #b7ede5;
+  color: #fff;
+  transition: 0.3s linear;
+  border-bottom: 2px solid transparent;
+  font-family: "Roboto", sans-serif;
+}
+
+.footer__container a:hover {
+  border-bottom: 2px solid #fff;
 }
 /* ? FINISH footer */
+
+@media (max-width: 780px) {
+  html {
+    font-size: 14px;
+  }
+  .menu-button-container {
+    display: flex;
+  }
+  .menu {
+    position: absolute;
+    top: 0;
+    margin-top: 50px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  #menu-toggle ~ .menu li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  #menu-toggle:checked ~ .menu li {
+    border: 1px solid #333;
+    height: 2.5em;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .menu > li {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    color: white;
+    background-color: #222;
+  }
+  .menu > li:not(:last-child) {
+    border-bottom: 1px solid #444;
+  }
+}
 
 @media all and (max-width: 700px) {
   /* !START ABOUT__ME */
@@ -378,4 +409,68 @@ footer {
     margin-top: 30px;
   }
   /* ? FINISH ABOUT__ME */
+  /* ! START FEATURES */
+  .features__container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .features__left {
+    width: 80%;
+    margin-bottom: 60px;
+    text-align: center;
+  }
+  .feature__right {
+    width: 80%;
+    text-align: center;
+  }
+  .my-skill__item {
+    padding: 10px;
+    width: 90%;
+  }
+
+  /* ? FINISH FEATURES */
+
+  .sidebar {
+    height: 70vh;
+  }
+
+  .footer__container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media all and (max-width: 1250px) {
+  .container {
+    padding-left: 50px;
+    padding-right: 10px;
+  }
+  .sidebar {
+    left: 0;
+  }
+}
+
+@media all and (max-width: 550px) {
+  html {
+    font-size: 12px;
+  }
+  .basic__information__item {
+    flex-wrap: wrap;
+  }
+  .basic__information__item p {
+    width: 90%;
+  }
+  footer {
+    height: 100%;
+  }
+  .features__container {
+    justify-content: center;
+    height: 100%;
+  }
+
+  .footer__container a {
+    padding: 20px 0;
+    width: 80%;
+    text-align: center;
+  }
 }
