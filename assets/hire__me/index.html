@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<main>
+		<div class="circle"></div>
+		<div class="register-form-container">
+			<h1 class="form-title">Регистрация</h1>
+			<div class="form-fields">
+				<div class="form_field">
+					<input type="text" placeholder="Фамилия" required pattern="[а-яА-Я]+">
+				</div>
+				<div class="form_field">
+					<input type="text" placeholder="Имя" required pattern="[а-яА-Я]+">
+				</div>
+				<div class="form_field">
+					<input type="text" placeholder="Пол" required pattern="[а-яА-Я]+">
+				</div>
+				<div class="form_field">
+					<input type="number" placeholder="Возраст" required>
+				</div>
+				<div class="form_field">
+					<input type="text" placeholder="Ориентация" required>
+				</div>
+				<div class="form_field">
+					<input type="email" placeholder="Почта" required>
+				</div>
+				<div class="form_field">
+					<input type="password" placeholder="Пароль" required minlength="8" maxlength="128">
+				</div>
+				<div class="form_field">
+					<input type="password" placeholder="Подтвердить пароль" required minlength="8" maxlength="128">
+				</div>
+			</div>
+			<div class="form-buttons">
+				<button class="button">Регистрация</button>
+			</div>
+		</div>
+	</main>
+	
+</body>
+</html>
